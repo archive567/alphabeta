@@ -1,0 +1,59 @@
+cabal-version: 2.4
+name:          alphabeta
+version:       0.0.1
+synopsis: See readme.md
+description: See readme.md for description.
+category: project
+author: Tony Day
+maintainer: tonyday567@gmail.com
+copyright: Tony Day (c) AfterTimes
+license: BSD-3-Clause
+homepage: https://github.com/tonyday567/alphabeta#readme
+bug-reports: https://github.com/tonyday567/alphabeta/issues
+build-type: Simple
+source-repository head
+  type: git
+  location: https://github.com/tonyday567/alphabeta
+
+library
+  hs-source-dirs:
+    src
+  default-extensions:
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+    -fwrite-ide-info
+    -hiedir=.hie
+  build-depends:
+    base >=4.7 && <5,
+    containers,
+    numhask >= 0.7 && < 0.8,
+  exposed-modules:
+    BoundedEval
+
+  other-modules:
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: test.hs
+  hs-source-dirs:
+    test
+  build-depends:
+    base >=4.7 && <5,
+    doctest >= 0.16 && < 0.18,
+    numhask >= 0.7 && < 0.8,
+    alphabeta
+  default-language: Haskell2010
+  default-extensions:
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+    -fwrite-ide-info
+    -hiedir=.hie

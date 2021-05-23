@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    - path: "./app/alphabeta.hs"
+      component: "alphabeta:exe:alphabeta"
+    - path: "./src"
+      component: "alphabeta:lib"
+    - path: "./test/alphabeta.hs"
+      component: "alphabeta:test:alphabeta"
